@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Cupcakes</h1>
+    <section class="cupcakes-list">
+        <h2>All Cupcakes</h2>
+    </section>
+    <section class="cupcakes-form">
+        <h2>Create Cupcake</h2>
+      <form action="/api/cupcakes" method="post" id="cupcake-form">
+        <div>
+          <label for="flavor">Flavor</label>
+          <input type="text" name="flavor" id="flavor" required />
+        </div>
+        <div>
+          <label for="size">Size</label>
+          <input type="text" name="size" id="size" required />
+        </div>
+        <div>
+          <label for="rating">Rating</label>
+          <input
+            type="number"
+            name="rating"
+            id="rating"
+            step=".1"
+            required
+          />
+        </div>
+        <div>
+          <label for="image">Image URL</label>
+          <input type="text" name="image" id="image" />
+          <button>Submit</button>
+        </div>
+      </form>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
